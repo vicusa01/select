@@ -1,0 +1,96 @@
+body {
+    text-align: center;
+    background: #ebf4fb;
+    min-height: 95vh;
+    margin: 0;
+    padding: 0;
+    border-bottom: 5vh solid #3694d7;
+    font-family: "Myriad Pro", "Arial", sans;
+    font-size: 24px;
+  }
+  
+  .dropdown-el {
+    margin-top: 65px;
+    width: 649px;
+    position: relative;
+    display: inline-block;
+    margin-right: 45px;
+    min-height: 41px;
+    max-height: 41px;
+    padding:23px 43px 21px 0px; 
+    overflow: hidden;
+    top: 0.5em;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    color: #444;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(16, 19, 58, 0.15);
+    transition: 0.3s all ease-in-out;
+  }
+  .dropdown-el input:focus + label {
+    background: #def;
+  }
+  .dropdown-el input {
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+    position: absolute;
+    opacity: 0.01;
+  }
+  .dropdown-el label {
+    display: block;
+    height: 41px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    padding:23px 43px 21px 50px; 
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s color ease-in-out;
+    
+  }
+  .dropdown-el label:nth-child(2) {
+    margin-top: 85px;
+    border-top: none;
+  }
+  .dropdown-el input:checked + label {
+    display: block;
+    border-top: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .dropdown-el input:checked + label:nth-child(2) {
+    margin-top: 0px;
+    position: relative;
+  }
+  .dropdown-el::after {
+    content: url(./line1.svg);
+    position: absolute;
+    right: 43px;
+    top: 27px;
+    transition: 0.4s all ease-in-out;
+  }
+  .dropdown-el.expanded {
+    padding: 0;
+    background-color:  rgba(219, 220, 225, 1);
+    border: 1px solid #000000;
+    border-radius: 50px;
+    max-height: 390px;
+  }
+  .dropdown-el.expanded label {
+    border-top: none;
+  }
+  .dropdown-el.expanded label:hover {
+    font-weight: 700;
+  }
+  .dropdown-el.expanded input:checked + label {
+    font-weight: 700;
+  }
+  .dropdown-el.expanded::after {
+    transform: rotate(-180deg);
+    top: 19px;
+  }
